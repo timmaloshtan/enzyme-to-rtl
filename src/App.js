@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Collapse from "./Collapse";
 
-function App() {
+const snacks = {
+  title: "Favorite Snacks",
+  contents: "Sunflower seeds are great"
+};
+const drinks = {
+  title: "Favorite Drinks",
+  contents: "Green tea rocks"
+};
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Enzyme -&gt; RTL</h1>
+      <h2>Start editing to see some magic happen!</h2>
+      <Collapse items={[snacks, drinks]} />
     </div>
   );
 }
-
-export default App;
